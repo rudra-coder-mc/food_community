@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
@@ -39,12 +39,14 @@ export default function ImageSlideshow() {
         <Image
           key={index}
           src={image.image}
+          fill
+          sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw" // Adjusted sizes based on breakpoints
+          style={{ objectFit: 'cover' }}
           className={`absolute inset-0 transition-opacity duration-700 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
             }`}
+
           alt={image.alt}
-          layout="fill" // Make the image fill its parent container
-          objectFit="cover" // Ensures the image covers the entire area
-          priority // Optional: Load first image faster
+          priority={index === 0} // Optionally prioritize the first image
         />
       ))}
     </div>

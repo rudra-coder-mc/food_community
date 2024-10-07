@@ -8,16 +8,16 @@ export default function CommunityPage() {
   return (
     <>
       <header className="bg-gray-100 py-16 text-center">
-        <h1 className="text-4xl font-bold text-gray-900">
+        <h1 className="text-4xl font-bold  900">
           One shared passion: <span className="text-green-600">Food</span>
         </h1>
-        <p className="text-lg text-gray-600 mt-4">
+        <p className="text-lg  600 mt-4">
           Join our community and share your favorite recipes!
         </p>
       </header>
 
       <main className="container mx-auto py-12">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-12">
+        <h2 className="text-3xl font-semibold text-center  800 mb-12">
           Community Perks
         </h2>
 
@@ -29,7 +29,7 @@ export default function CommunityPage() {
               alt="A delicious meal"
               className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mb-4"
             />
-            <p className="text-lg text-gray-700">Share & discover recipes</p>
+            <p className="text-lg  700">Share & discover recipes</p>
           </li>
           <li className="flex flex-col items-center">
             <Image
@@ -37,7 +37,7 @@ export default function CommunityPage() {
               alt="A crowd of people, cooking"
               className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mb-4"
             />
-            <p className="text-lg text-gray-700">Find new friends & like-minded people</p>
+            <p className="text-lg  700">Find new friends & like-minded people</p>
           </li>
           <li className="flex flex-col items-center">
             <Image
@@ -45,7 +45,7 @@ export default function CommunityPage() {
               alt="A crowd of people at a cooking event"
               className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mb-4"
             />
-            <p className="text-lg text-gray-700">Participate in exclusive events</p>
+            <p className="text-lg  700">Participate in exclusive events</p>
           </li>
         </ul>
       </main>

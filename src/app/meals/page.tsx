@@ -1,16 +1,21 @@
+import MealGrid from '@/components/MealGrid';
+import { getMeals } from '@/lib/meals';
 import Link from 'next/link';
 // import MealsGrid from '@/components/meals/meals-grid';
 
-export default function MealsPage() {
+export default async function MealsPage() {
+
+  const data = await getMeals()
+
   return (
     <>
       <header className="bg-gray-50 py-16 text-center">
         <div className="container mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold  900 mb-4">
             Delicious meals, created{' '}
             <span className="text-green-600">by you</span>
           </h1>
-          <p className="text-lg text-gray-600 mb-6">
+          <p className="text-lg  600 mb-6">
             Choose your favorite recipe and cook it yourself. It&apos;s easy and fun!
           </p>
           <p>
@@ -22,7 +27,7 @@ export default function MealsPage() {
       </header>
 
       <main className="container mx-auto py-12">
-        {/* <MealsGrid meals={[]} /> */}
+        <MealGrid props={data} />
       </main>
     </>
   );
