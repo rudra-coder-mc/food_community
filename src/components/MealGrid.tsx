@@ -1,5 +1,5 @@
+import { MealGridProp } from "@/lib/type"
 import MealItem from "./MealItem"
-export interface MealGridProp { id: string, title: string, slug: string, image: string, summary: string, creator: string }
 
 export default function MealGrid({ props }: { props: MealGridProp[] }) {
   return (

@@ -1,13 +1,16 @@
-import { NextPage } from 'next';
-import Head from 'next/head';
+import { Metadata, NextPage } from 'next';
+
+
+export const metadata: Metadata = {
+  title: "Contact Us - Restaurant",
+  description: "Get in touch with our restaurant.",
+};
+
+
 
 const Contact: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Contact Us - Restaurant</title>
-        <meta name="description" content="Get in touch with our restaurant." />
-      </Head>
       <div className="min-h-screen   flex flex-col justify-center">
         <main className="container mx-auto py-10 px-4">
           <h1 className="text-4xl font-bold text-center mb-5">Contact Us</h1>

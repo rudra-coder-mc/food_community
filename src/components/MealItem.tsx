@@ -1,17 +1,11 @@
+import { MealGridProp } from "@/lib/type";
 import Image from "next/image";
 import Link from "next/link";
 
-export interface mealItemProps {
-  title: string;
-  slug: string;
-  image: string;
-  summary: string;
-  creator: string;
-}
 
-export default function MealItem({ title, slug, image, summary, creator }: mealItemProps) {
+export default function MealItem({ title, slug, image, summary, creator }: MealGridProp) {
   return (
-    <div className="card  bg-base-100 ">
+    <div className="card border">
       <figure className="relative w-full h-64">
         <Image
           src={image}
@@ -25,9 +19,9 @@ export default function MealItem({ title, slug, image, summary, creator }: mealI
       </figure>
       <div className="card-body p-6">
         <h2 className="card-title">{title}</h2>
-        <p className="card-title text-sm mb-4">By {creator}</p>
+        <p className="text-sm mb-3">By {creator}</p>
         <p className="mb-6">{summary}</p>
-        <div className="flex justify-end">
+        <div className="card-actions flex justify-end">
           <Link href={`/meals/${slug}`} className="btn btn-primary font-semibold">
             View Details
           </Link>

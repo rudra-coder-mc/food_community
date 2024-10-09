@@ -7,17 +7,17 @@ import eventsIcon from '@/assets/icons/events.png';
 export default function CommunityPage() {
   return (
     <>
-      <header className="bg-gray-100 py-16 text-center">
-        <h1 className="text-4xl font-bold  900">
-          One shared passion: <span className="text-green-600">Food</span>
+      <div className="py-16 text-center">
+        <h1 className="text-4xl font-bold  ">
+          One shared passion: <span className="text-success">Food</span>
         </h1>
         <p className="text-lg  600 mt-4">
           Join our community and share your favorite recipes!
         </p>
-      </header>
+      </div>
 
-      <main className="container mx-auto py-12">
-        <h2 className="text-3xl font-semibold text-center  800 mb-12">
+      <div className="container mx-auto py-12">
+        <h2 className="text-3xl font-semibold text-center  mb-12">
           Community Perks
         </h2>
 
@@ -45,10 +45,10 @@ export default function CommunityPage() {
               alt="A crowd of people at a cooking event"
               className="w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 mb-4"
             />
-            <p className="text-lg  700">Participate in exclusive events</p>
+            <p className="text-lg  ">Participate in exclusive events</p>
           </li>
         </ul>
-      </main>
+      </div>
     </>
   );
 }

@@ -1,19 +1,24 @@
-import MealGrid from '@/components/MealGrid';
-import { getMeals } from '@/lib/meals';
 import Link from 'next/link';
-// import MealsGrid from '@/components/meals/meals-grid';
+import { Suspense } from 'react';
+import MealData from './MealData';
+import Loading from '../loading';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'All Meals',
+  description: 'Browse the delicious meals shared by our vibrant community.',
+};
 
 export default async function MealsPage() {
 
-  const data = await getMeals()
 
   return (
     <>
-      <header className="bg-gray-50 py-16 text-center">
+      <div className="py-16 text-center">
         <div className="container mx-auto">
-          <h1 className="text-4xl font-bold  900 mb-4">
+          <h1 className="text-4xl font-bold   mb-4">
             Delicious meals, created{' '}
-            <span className="text-green-600">by you</span>
+            <span className=" text-success ">by you</span>
           </h1>
           <p className="text-lg  600 mb-6">
             Choose your favorite recipe and cook it yourself. It&apos;s easy and fun!
@@ -24,11 +29,13 @@ export default async function MealsPage() {
             </Link>
           </p>
         </div>
-      </header>
+      </div>
 
-      <main className="container mx-auto py-12">
-        <MealGrid props={data} />
-      </main>
+      <div className="container mx-auto py-12">
+        <Suspense fallback={<Loading />}>
+          <MealData />
+        </Suspense>
+      </div>
     </>
   );
 }
